@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-bdc4ba39f96432b2e0f09401dfea1fe5"}, "mark": {"type": "arc", "innerRadius": 50}, "encoding": {"color": {"field": "primary_genre_l1", "type": "nominal"}, "theta": {"field": "artist_pct", "type": "quantitative"}, "tooltip": [{"field": "primary_genre_l1", "type": "nominal"}, {"field": "artist_pct", "type": "quantitative"}]}, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-bdc4ba39f96432b2e0f09401dfea1fe5": [{"primary_genre_l1": "Electronic", "total_artists": 15800, "artist_pct": 22.76}, {"primary_genre_l1": "Rock", "total_artists": 8644, "artist_pct": 12.45}, {"primary_genre_l1": "Pop", "total_artists": 6707, "artist_pct": 9.66}, {"primary_genre_l1": "World", "total_artists": 6237, "artist_pct": 8.99}, {"primary_genre_l1": "Metal", "total_artists": 5202, "artist_pct": 7.49}, {"primary_genre_l1": "Latin", "total_artists": 4410, "artist_pct": 6.35}, {"primary_genre_l1": "R&B", "total_artists": 3904, "artist_pct": 5.62}, {"primary_genre_l1": "Folk", "total_artists": 3508, "artist_pct": 5.05}, {"primary_genre_l1": "Classical", "total_artists": 2927, "artist_pct": 4.22}, {"primary_genre_l1": "Hip-Hop", "total_artists": 2381, "artist_pct": 3.43}, {"primary_genre_l1": "Jazz", "total_artists": 2262, "artist_pct": 3.26}, {"primary_genre_l1": "Reggae", "total_artists": 1660, "artist_pct": 2.39}, {"primary_genre_l1": "Gospel", "total_artists": 1569, "artist_pct": 2.26}, {"primary_genre_l1": "Blues", "total_artists": 1200, "artist_pct": 1.73}, {"primary_genre_l1": "Country", "total_artists": 1123, "artist_pct": 1.62}, {"primary_genre_l1": "Instrumental", "total_artists": 1057, "artist_pct": 1.52}, {"primary_genre_l1": "Unknown", "total_artists": 636, "artist_pct": 0.92}, {"primary_genre_l1": "Soundtrack", "total_artists": 187, "artist_pct": 0.27}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

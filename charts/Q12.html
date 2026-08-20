@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-8d8239364893ed5a8499465c6b4280ca"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "avg_follower", "type": "quantitative"}, "tooltip": [{"field": "primary_genre_l1", "type": "nominal"}, {"field": "avg_follower", "type": "quantitative"}], "x": {"axis": {"labelAngle": 45}, "field": "primary_genre_l1", "sort": {"field": "avg_follower", "order": "descending"}, "type": "nominal"}, "y": {"field": "avg_follower", "type": "quantitative"}}, "height": 300, "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-8d8239364893ed5a8499465c6b4280ca": [{"primary_genre_l1": "Latin", "avg_follower": 20950612}, {"primary_genre_l1": "Hip-Hop", "avg_follower": 9926661}, {"primary_genre_l1": "Pop", "avg_follower": 9162600}, {"primary_genre_l1": "Rock", "avg_follower": 6613398}, {"primary_genre_l1": "Electronic", "avg_follower": 6595876}, {"primary_genre_l1": "Metal", "avg_follower": 5375920}, {"primary_genre_l1": "R&B", "avg_follower": 4250588}, {"primary_genre_l1": "Classical", "avg_follower": 4071406}, {"primary_genre_l1": "Jazz", "avg_follower": 3886038}, {"primary_genre_l1": "Country", "avg_follower": 3099904}, {"primary_genre_l1": "Blues", "avg_follower": 2499078}, {"primary_genre_l1": "Folk", "avg_follower": 1643688}, {"primary_genre_l1": "Reggae", "avg_follower": 1593714}, {"primary_genre_l1": "World", "avg_follower": 1057770}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
