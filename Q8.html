@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-e12260b13c7717624c277e1f574876bb"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "primary_genre_l1", "type": "nominal"}, "tooltip": [{"field": "career_start_year", "type": "quantitative"}, {"field": "primary_genre_l1", "type": "nominal"}, {"field": "artists", "type": "quantitative"}], "x": {"field": "career_start_year", "type": "nominal"}, "y": {"field": "primary_genre_l1", "type": "nominal"}}, "height": 400, "width": 650, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-e12260b13c7717624c277e1f574876bb": [{"career_start_year": 1957, "primary_genre_l1": "Blues", "artists": 1}, {"career_start_year": 1958, "primary_genre_l1": "Rock", "artists": 1}, {"career_start_year": 1960, "primary_genre_l1": "Blues", "artists": 2}, {"career_start_year": 1961, "primary_genre_l1": "R&B", "artists": 1}, {"career_start_year": 1962, "primary_genre_l1": "R&B", "artists": 1}, {"career_start_year": 1963, "primary_genre_l1": "Rock", "artists": 2}, {"career_start_year": 1964, "primary_genre_l1": "Blues", "artists": 1}, {"career_start_year": 1965, "primary_genre_l1": "Rock", "artists": 3}, {"career_start_year": 1966, "primary_genre_l1": "Rock", "artists": 4}, {"career_start_year": 1967, "primary_genre_l1": "Rock", "artists": 9}, {"career_start_year": 1968, "primary_genre_l1": "Rock", "artists": 5}, {"career_start_year": 1969, "primary_genre_l1": "Rock", "artists": 9}, {"career_start_year": 1970, "primary_genre_l1": "Rock", "artists": 9}, {"career_start_year": 1971, "primary_genre_l1": "Rock", "artists": 9}, {"career_start_year": 1972, "primary_genre_l1": "Rock", "artists": 9}, {"career_start_year": 1973, "primary_genre_l1": "Rock", "artists": 10}, {"career_start_year": 1974, "primary_genre_l1": "Rock", "artists": 7}, {"career_start_year": 1975, "primary_genre_l1": "Rock", "artists": 8}, {"career_start_year": 1976, "primary_genre_l1": "Rock", "artists": 13}, {"career_start_year": 1977, "primary_genre_l1": "Rock", "artists": 10}, {"career_start_year": 1978, "primary_genre_l1": "Rock", "artists": 16}, {"career_start_year": 1979, "primary_genre_l1": "Rock", "artists": 15}, {"career_start_year": 1980, "primary_genre_l1": "Rock", "artists": 9}, {"career_start_year": 1981, "primary_genre_l1": "Rock", "artists": 16}, {"career_start_year": 1982, "primary_genre_l1": "Rock", "artists": 10}, {"career_start_year": 1983, "primary_genre_l1": "Rock", "artists": 16}, {"career_start_year": 1984, "primary_genre_l1": "Rock", "artists": 16}, {"career_start_year": 1985, "primary_genre_l1": "Rock", "artists": 15}, {"career_start_year": 1986, "primary_genre_l1": "Rock", "artists": 12}, {"career_start_year": 1987, "primary_genre_l1": "Pop", "artists": 10}, {"career_start_year": 1988, "primary_genre_l1": "Rock", "artists": 14}, {"career_start_year": 1989, "primary_genre_l1": "Rock", "artists": 11}, {"career_start_year": 1990, "primary_genre_l1": "R&B", "artists": 20}, {"career_start_year": 1991, "primary_genre_l1": "R&B", "artists": 19}, {"career_start_year": 1992, "primary_genre_l1": "R&B", "artists": 15}, {"career_start_year": 1993, "primary_genre_l1": "R&B", "artists": 10}, {"career_start_year": 1994, "primary_genre_l1": "R&B", "artists": 17}, {"career_start_year": 1995, "primary_genre_l1": "Electronic", "artists": 16}, {"career_start_year": 1996, "primary_genre_l1": "R&B", "artists": 22}, {"career_start_year": 1997, "primary_genre_l1": "Electronic", "artists": 19}, {"career_start_year": 1998, "primary_genre_l1": "Hip-Hop", "artists": 14}, {"career_start_year": 1999, "primary_genre_l1": "Hip-Hop", "artists": 18}, {"career_start_year": 2000, "primary_genre_l1": "Electronic", "artists": 1193}, {"career_start_year": 2001, "primary_genre_l1": "Electronic", "artists": 723}, {"career_start_year": 2002, "primary_genre_l1": "Electronic", "artists": 632}, {"career_start_year": 2003, "primary_genre_l1": "Electronic", "artists": 478}, {"career_start_year": 2004, "primary_genre_l1": "Electronic", "artists": 515}, {"career_start_year": 2005, "primary_genre_l1": "Electronic", "artists": 508}, {"career_start_year": 2006, "primary_genre_l1": "Electronic", "artists": 558}, {"career_start_year": 2007, "primary_genre_l1": "Electronic", "artists": 616}, {"career_start_year": 2008, "primary_genre_l1": "Electronic", "artists": 657}, {"career_start_year": 2009, "primary_genre_l1": "Electronic", "artists": 608}, {"career_start_year": 2010, "primary_genre_l1": "Electronic", "artists": 692}, {"career_start_year": 2011, "primary_genre_l1": "Electronic", "artists": 624}, {"career_start_year": 2012, "primary_genre_l1": "Electronic", "artists": 668}, {"career_start_year": 2013, "primary_genre_l1": "Electronic", "artists": 618}, {"career_start_year": 2014, "primary_genre_l1": "Electronic", "artists": 660}, {"career_start_year": 2015, "primary_genre_l1": "Electronic", "artists": 731}, {"career_start_year": 2016, "primary_genre_l1": "Electronic", "artists": 681}, {"career_start_year": 2017, "primary_genre_l1": "Electronic", "artists": 817}, {"career_start_year": 2018, "primary_genre_l1": "Electronic", "artists": 855}, {"career_start_year": 2019, "primary_genre_l1": "Electronic", "artists": 1265}, {"career_start_year": 2020, "primary_genre_l1": "Electronic", "artists": 611}, {"career_start_year": 2021, "primary_genre_l1": "Electronic", "artists": 413}, {"career_start_year": 2022, "primary_genre_l1": "Electronic", "artists": 243}, {"career_start_year": 2023, "primary_genre_l1": "Metal", "artists": 306}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-c9d8a32eee9ea30913065a119a18428d"}, "mark": {"type": "line", "color": "orange", "strokeWidth": 7}, "encoding": {"tooltip": [{"field": "career_start_year", "type": "quantitative"}, {"field": "no_of_artist", "type": "quantitative"}], "x": {"field": "career_start_year", "type": "nominal"}, "y": {"field": "no_of_artist", "type": "quantitative"}}, "height": 400, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-c9d8a32eee9ea30913065a119a18428d": [{"career_start_year": 1958, "no_of_artist": 1}, {"career_start_year": 1961, "no_of_artist": 1}, {"career_start_year": 1962, "no_of_artist": 1}, {"career_start_year": 1957, "no_of_artist": 2}, {"career_start_year": 1960, "no_of_artist": 3}, {"career_start_year": 1964, "no_of_artist": 3}, {"career_start_year": 1963, "no_of_artist": 5}, {"career_start_year": 1965, "no_of_artist": 6}, {"career_start_year": 1968, "no_of_artist": 7}, {"career_start_year": 1966, "no_of_artist": 8}, {"career_start_year": 1967, "no_of_artist": 15}, {"career_start_year": 1969, "no_of_artist": 17}, {"career_start_year": 1980, "no_of_artist": 17}, {"career_start_year": 1971, "no_of_artist": 17}, {"career_start_year": 1977, "no_of_artist": 19}, {"career_start_year": 1974, "no_of_artist": 22}, {"career_start_year": 1972, "no_of_artist": 24}, {"career_start_year": 1970, "no_of_artist": 24}, {"career_start_year": 1975, "no_of_artist": 27}, {"career_start_year": 1979, "no_of_artist": 28}, {"career_start_year": 1973, "no_of_artist": 28}, {"career_start_year": 1982, "no_of_artist": 29}, {"career_start_year": 1981, "no_of_artist": 30}, {"career_start_year": 1983, "no_of_artist": 31}, {"career_start_year": 1976, "no_of_artist": 33}, {"career_start_year": 1978, "no_of_artist": 33}, {"career_start_year": 1984, "no_of_artist": 35}, {"career_start_year": 1986, "no_of_artist": 35}, {"career_start_year": 1985, "no_of_artist": 36}, {"career_start_year": 1991, "no_of_artist": 40}, {"career_start_year": 1989, "no_of_artist": 42}, {"career_start_year": 1987, "no_of_artist": 44}, {"career_start_year": 1992, "no_of_artist": 47}, {"career_start_year": 1993, "no_of_artist": 48}, {"career_start_year": 1990, "no_of_artist": 59}, {"career_start_year": 1988, "no_of_artist": 60}, {"career_start_year": 1994, "no_of_artist": 61}, {"career_start_year": 1998, "no_of_artist": 67}, {"career_start_year": 1999, "no_of_artist": 68}, {"career_start_year": 1995, "no_of_artist": 70}, {"career_start_year": 1997, "no_of_artist": 75}, {"career_start_year": 1996, "no_of_artist": 78}, {"career_start_year": 2022, "no_of_artist": 1208}, {"career_start_year": 2023, "no_of_artist": 1348}, {"career_start_year": 2021, "no_of_artist": 2254}, {"career_start_year": 2005, "no_of_artist": 2316}, {"career_start_year": 2003, "no_of_artist": 2355}, {"career_start_year": 2011, "no_of_artist": 2419}, {"career_start_year": 2006, "no_of_artist": 2422}, {"career_start_year": 2004, "no_of_artist": 2439}, {"career_start_year": 2007, "no_of_artist": 2460}, {"career_start_year": 2009, "no_of_artist": 2471}, {"career_start_year": 2010, "no_of_artist": 2530}, {"career_start_year": 2013, "no_of_artist": 2544}, {"career_start_year": 2008, "no_of_artist": 2572}, {"career_start_year": 2016, "no_of_artist": 2633}, {"career_start_year": 2012, "no_of_artist": 2655}, {"career_start_year": 2014, "no_of_artist": 2756}, {"career_start_year": 2002, "no_of_artist": 2859}, {"career_start_year": 2015, "no_of_artist": 2967}, {"career_start_year": 2020, "no_of_artist": 3012}, {"career_start_year": 2001, "no_of_artist": 3560}, {"career_start_year": 2017, "no_of_artist": 3616}, {"career_start_year": 2018, "no_of_artist": 3812}, {"career_start_year": 2019, "no_of_artist": 5375}, {"career_start_year": 2000, "no_of_artist": 5535}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
